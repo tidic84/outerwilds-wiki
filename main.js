@@ -55,9 +55,12 @@ let isScrolling = false;
 function animate() {
     requestAnimationFrame(animate);
     if (isScrolling) {
-        camera.position.y += scrollSpeed;
-        scrollSpeed *= 0.95; // scroll smooth
-        if (Math.abs(scrollSpeed) < 0.001) {
+        height -= scrollSpeed;
+        if(height > 0) {
+            camera.position.y += scrollSpeed;
+            scrollSpeed *= 0.95; // scroll smooth
+        }
+        if (Math.abs(scrollSpeed) < 0.001 || height < 0) {
             isScrolling = false;
         }
     }
@@ -71,15 +74,14 @@ window.onwheel = function (e) {
     scrollSpeed = -e.deltaY;
     if(scrollSpeed > maxScrollSpeed) scrollSpeed = maxScrollSpeed;
     if(scrollSpeed < -maxScrollSpeed) scrollSpeed = -maxScrollSpeed;
-    height -= scrollSpeed;
     scrollSpeed /= 150;
-    if(height <= 0) {
+    if(height < 0) {
         height = 0;
         scrollSpeed = 0;
-        isScrolling = false;
     } else {
         isScrolling = true;
     }
+    
     console.log('height', height);
 };
 
