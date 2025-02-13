@@ -91,6 +91,13 @@ let height = 0;
 let scrollSpeed = 0;
 let isScrolling = false;
 
+// Titre
+const title = document.getElementById('title');
+
+function updateTitlePosition() {
+    title.style.transform = `translate(-50%, ${-height*200}px)`;
+}
+
 // Fonction d'animation
 function animate() {
     requestAnimationFrame(animate);
@@ -105,6 +112,7 @@ function animate() {
         }
     }
     if ( mixer ) mixer.update( clock.getDelta() );
+    updateTitlePosition();
     renderer.render(scene, camera);
 }
 animate();
