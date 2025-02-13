@@ -5,8 +5,8 @@ const renderer = new THREE.WebGLRenderer({ antialias: true });
 
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setPixelRatio(window.devicePixelRatio);
-renderer.shadowMap.enabled = true;
-renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+// renderer.shadowMap.enabled = true;
+// renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 const canvas = renderer.domElement;
 canvas.id = 'threejs-canvas';
 document.body.appendChild(canvas);
@@ -26,6 +26,10 @@ scene.add(ambientLight);
 // scene.add(axesHelper);
 
 // Chargement du modèle 3d
+var clock, mixer;
+
+clock = new THREE.Clock();
+
 const loader = new THREE.GLTFLoader();
 loader.load('./res/home.glb', function (gltf) {
     gltf.scene.traverse(function (node) {
@@ -35,6 +39,13 @@ loader.load('./res/home.glb', function (gltf) {
         }
     });
     scene.add(gltf.scene);
+
+    if (gltf.animations.length > 0) {
+		mixer = new THREE.AnimationMixer( gltf.scene );
+		gltf.animations.forEach( clip => { mixer.clipAction( clip ).loop = THREE.LoopRepeat; } );
+		mixer.clipAction( gltf.animations[ 0 ] ).play();
+	}
+
     animate();
 }, undefined, function (error) {
     console.error('Erreur de chargement du modèle ' + error);
@@ -64,6 +75,7 @@ function animate() {
             isScrolling = false;
         }
     }
+    if ( mixer ) mixer.update( clock.getDelta() );
     renderer.render(scene, camera);
 }
 animate();
