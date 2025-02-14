@@ -11,11 +11,14 @@
     <title>OuterWilds Wiki</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-black">
 
-    <h1 id="title" class="title text-white fixed left-150 top-55 font-extrabold w-full text-center text-8xl">
+    <h1 id="title" class="title text-white absolute left-0 top-55 font-extrabold w-full text-center text-8xl">
         OUTER WILDS Wiki
     </h1>
+
+    <div id="transition" class="bg-gradient-to-b from-transparent to-black width-100% h-20 z-10"></div>
+    
 
     <!-- ThreeJS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>

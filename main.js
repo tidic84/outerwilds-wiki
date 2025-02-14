@@ -95,8 +95,12 @@ let isScrolling = false;
 const title = document.getElementById('title');
 
 function updateTitlePosition() {
-    title.style.transform = `translate(-50%, ${-height*200}px)`;
+    title.style.transform = `translate(0, ${-height*550}px) scale(${1 + height / 4})`;
+    // title.style.transform = 'scale(' + (1 - height / 10) + ')';
 }
+
+const transitionBloc = document.getElementById('transition');
+transitionBloc.style.transform = 'translate(0, 100vh)';
 
 // Fonction d'animation
 function animate() {
@@ -123,7 +127,7 @@ window.onwheel = function (e) {
     scrollSpeed = -e.deltaY;
     if(scrollSpeed > maxScrollSpeed) scrollSpeed = maxScrollSpeed;
     if(scrollSpeed < -maxScrollSpeed) scrollSpeed = -maxScrollSpeed;
-    scrollSpeed /= 150;
+    scrollSpeed /= 500;
     if(height < 0) {
         height = 0;
         scrollSpeed = 0;
