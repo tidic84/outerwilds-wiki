@@ -1,4 +1,1 @@
-<?php
-    include 'header.php';
-?>
-<div>Page Contact</div>
+<h1>Page Contact</h1>
