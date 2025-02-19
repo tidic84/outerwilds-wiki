@@ -7,9 +7,11 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap; // Optionnel : pour des ombres plus douces
-const canvas = renderer.domElement;
-canvas.id = 'threejs-canvas';
-document.body.appendChild(canvas);
+const canvas = document.getElementById('canvas');
+canvas.appendChild(renderer.domElement);
+
+
+
 
 // Scene
 scene.background = new THREE.Color(0x000000);
@@ -99,8 +101,8 @@ function updateTitlePosition() {
     // title.style.transform = 'scale(' + (1 - height / 10) + ')';
 }
 
-const transitionBloc = document.getElementById('transition');
-transitionBloc.style.transform = 'translate(0, 100vh)';
+// const transitionBloc = document.getElementById('transition');
+// transitionBloc.style.transform = 'translate(0, 100vh)';
 
 // Fonction d'animation
 function animate() {
@@ -108,8 +110,9 @@ function animate() {
     if (isScrolling) {
         height -= scrollSpeed;
         if(height > 0) {
-            camera.position.y += scrollSpeed;
             scrollSpeed *= 0.95; // scroll smooth
+            camera.position.x -= scrollSpeed*0.5;
+            camera.position.y -= scrollSpeed*0.5;
         }
         if (Math.abs(scrollSpeed) < 0.001 || height < 0) {
             isScrolling = false;
