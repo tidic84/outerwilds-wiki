@@ -1,0 +1,6 @@
+body { 
+    margin: 0;
+    font-family: 'montserrat', 'sans-serif'; 
+    min-height: 200vh;
+}
+canvas { display: block; }
