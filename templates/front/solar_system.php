@@ -65,7 +65,7 @@
         </div>
         <div class="w-1/6 flex justify-center">
             <img src="../../res/saborb.png" alt="saborb" class="orbite">
-            <img src=".././res/sablieresfond.png" alt="sabliere" class="astre parallax hidden" >
+            <img src="../../res/sablieresfond.png" alt="sabliere" class="astre parallax hidden" >
         </div>
         <div class="w-1/6 flex justify-center">
         <img src="../../res/atreorb.png" alt="saborb" class="orbite">

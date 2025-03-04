@@ -24,6 +24,8 @@
                 class="text-sm/6 font-semibold text-white-900 hover:text-orange-600">Articles</a>
             <a href="<?php echo $racine_path."control/contact.php" ?>"
                 class="text-sm/6 font-semibold text-white-900 hover:text-orange-600">Contact</a>
+            <a href="<?php echo $racine_path."control/faq.php" ?>"
+                class="text-sm/6 font-semibold text-white-900 hover:text-orange-600">FAQ</a>
             <a href="<?php echo $racine_path."control/login.php" ?>"
                 class="text-sm/6 font-semibold text-white-900 hover:text-orange-600">Login</a>
         </div>
@@ -51,6 +53,8 @@
                             class="block rounded-lg px-3 py-2 text-base/7 font-semibold text-white-900 hover:bg-orange-50">Articles</a>
                         <a href="<?php echo $racine_path."control/contact.php" ?>"
                             class="block rounded-lg px-3 py-2 text-base/7 font-semibold text-white-900 hover:bg-orange-50">Contact</a>
+                        <a href="<?php echo $racine_path."control/faq.php" ?>"
+                            class="block rounded-lg px-3 py-2 text-base/7 font-semibold text-white-900 hover:bg-orange-50">FAQ</a>
                         <a href="<?php echo $racine_path."control/login.php" ?>"
                             class="block rounded-lg px-3 py-2 text-base/7 font-semibold text-white-900 hover:bg-orange-50">Login</a>
                     </div>
