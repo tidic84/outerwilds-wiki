@@ -1,9 +1,9 @@
 <!-- Header pris de tailwindui -->
-<header class="bg-transparent fixed shadow">
+<header class="bg-transparent shadow-md">
     <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div class="flex lg:flex-1">
-            <h1 class="text-3xl font-bold tracking-tight text-gray-900">
-                Outer Wilds Wiki
+            <h1 class="text-3xl font-bold tracking-tight text-white-900">
+                Outer Wilds Wiki - <?php echo $titre ?>
             </h1>
         </div>
         <div class="flex lg:hidden">
@@ -18,19 +18,20 @@
             </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
-            <a href="/salles/univ/ceri"
-                class="text-sm/6 font-semibold text-gray-900 hover:text-indigo-600">Ceri</a>
-            <a href="/salles/univ/agroscience"
-                class="text-sm/6 font-semibold text-gray-900 hover:text-indigo-600">Agroscience</a>
-            <a href="/salles/univ/avignon-centre"
-                class="text-sm/6 font-semibold text-gray-900 hover:text-indigo-600">Avignon-Centre</a>
+            <a href="<?php echo $racine_path ?>"
+                class="text-sm/6 font-semibold text-white-900 hover:text-orange-600">Accueil</a>
+            <a href="<?php echo $racine_path."control/articles.php" ?>"
+                class="text-sm/6 font-semibold text-white-900 hover:text-orange-600">Articles</a>
+            <a href="<?php echo $racine_path."control/contact.php" ?>"
+                class="text-sm/6 font-semibold text-white-900 hover:text-orange-600">Contact</a>
+            <a href="<?php echo $racine_path."control/login.php" ?>"
+                class="text-sm/6 font-semibold text-white-900 hover:text-orange-600">Login</a>
         </div>
     </nav>
 
     <div class="lg:hidden hidden" role="dialog" aria-modal="true">
         <div class="fixed inset-0 z-10"></div>
-        <div
-            class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div class="flex items-center justify-between">
 
                 <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
@@ -44,12 +45,14 @@
             <div class="mt-6 flow-root">
                 <div class="-my-6 divide-y divide-gray-500/10">
                     <div class="space-y-2 py-6">
-                        <a href="/salles/univ/ceri"
-                            class="block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Ceri</a>
-                        <a href="/salles/univ/agroscience"
-                            class="block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Agroscience</a>
-                        <a href="/salles/univ/avignon-centre"
-                            class="block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Avignon-Centre</a>
+                        <a href="<?php echo $racine_path ?>"
+                            class="block rounded-lg px-3 py-2 text-base/7 font-semibold text-white-900 hover:bg-orange-50">Accueil</a>
+                        <a href="<?php echo $racine_path."control/articles.php" ?>"
+                            class="block rounded-lg px-3 py-2 text-base/7 font-semibold text-white-900 hover:bg-orange-50">Articles</a>
+                        <a href="<?php echo $racine_path."control/contact.php" ?>"
+                            class="block rounded-lg px-3 py-2 text-base/7 font-semibold text-white-900 hover:bg-orange-50">Contact</a>
+                        <a href="<?php echo $racine_path."control/login.php" ?>"
+                            class="block rounded-lg px-3 py-2 text-base/7 font-semibold text-white-900 hover:bg-orange-50">Login</a>
                     </div>
                 </div>
             </div>

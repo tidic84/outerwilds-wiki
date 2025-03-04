@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,8 +27,7 @@ $page = $_GET['page'] ?? 'home';
 $pages = [
     'home' => './template/home.php',
     'articles' => './template/articles.php',
-    'contact' => './template/contact.php',
-    'solar_system' => './template/solar_system.php',
+    'contact' => './template/contact.php'
 ];
 
 if (array_key_exists($page, $pages)) {
