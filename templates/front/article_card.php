@@ -16,18 +16,18 @@
                                              alt="<?php echo htmlspecialchars($article['titre']); ?>" 
                                              class="rounded-t-2xl w-full object-cover h-48">
                                     </div>
-                                    <div class="p-4 lg:p-6 transition-all duration-300 rounded-b-2xl group-hover:bg-gray-50">
+                                    <div class="p-4 lg:p-6 transition-all duration-300 rounded-b-2xl group-hover:bg-gray-50 flex flex-col h-[calc(100%-12rem)]">
                                         <span class="text-orange-600 font-medium mb-3 block">
                                             <?php echo date('d M Y', strtotime($article['date_creation'])); ?>
                                         </span>
                                         <h4 class="text-xl text-gray-900 font-medium leading-8 mb-5">
                                             <?php echo htmlspecialchars($article['titre']); ?>
                                         </h4>
-                                        <p class="text-gray-500 leading-6 mb-10">
+                                        <p class="text-gray-500 leading-6 mb-auto">
                                             <?php echo htmlspecialchars(substr($article['contenu'], 0, 150)) . '...'; ?>
                                         </p>
                                         <a href="articles.php?id=<?php echo $article['id']; ?>" 
-                                           class="cursor-pointer text-lg text-orange-600 font-semibold">
+                                           class="cursor-pointer text-lg text-orange-600 font-semibold mt-4">
                                             Lire plus...
                                         </a>
                                     </div>
