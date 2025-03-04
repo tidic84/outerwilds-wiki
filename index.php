@@ -21,21 +21,15 @@
 </script>
 
 <body class="bg-black text-white font-montserrat">
-    <?php
-$page = $_GET['page'] ?? 'home';
-
-$pages = [
-    'home' => './template/home.php',
-    'articles' => './template/articles.php',
-    'contact' => './template/contact.php'
-];
-
-if (array_key_exists($page, $pages)) {
-    require $pages[$page];
-} else {
-    http_response_code(404);
-    require './template/404.php';
-}
+<?php
+    $racine_path = './';
+    $titre = "Accueil";
+    include($racine_path."templates/front/header.php");
+    echo "<main>";
+    include($racine_path."templates/front/home.php");
+    echo "</main>";
+    // include($racine_path."templates/front/footer.php")
+    
 ?>
 
 
