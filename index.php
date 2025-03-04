@@ -27,7 +27,8 @@ $page = $_GET['page'] ?? 'home';
 $pages = [
     'home' => './template/home.php',
     'articles' => './template/articles.php',
-    'contact' => './template/contact.php'
+    'contact' => './template/contact.php',
+    'solar_system' => './template/solar_system.php',
 ];
 
 if (array_key_exists($page, $pages)) {
