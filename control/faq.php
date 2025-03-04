@@ -22,7 +22,6 @@
 <main class="container mx-auto px-4 py-8">
     <h1 class="text-3xl font-bold text-center mb-8">Foire Aux Questions</h1>
 
-    <!-- Simulation des données qui viendraient de la DB -->
     <?php
     $faq_items = [
         [

@@ -97,7 +97,7 @@ let isScrolling = false;
 const title = document.getElementById('title');
 
 function updateTitlePosition() {
-    title.style.transform = `translate(0, ${-height*550}px) scale(${1 + height / 4})`;
+    // title.style.transform = `translate(0, ${-height*550}px) scale(${1 + height / 4})`;
     // title.style.transform = 'scale(' + (1 - height / 10) + ')';
 }
 
@@ -107,17 +107,17 @@ function updateTitlePosition() {
 // Fonction d'animation
 function animate() {
     requestAnimationFrame(animate);
-    if (isScrolling) {
-        height -= scrollSpeed;
-        if(height > 0) {
-            scrollSpeed *= 0.95; // scroll smooth
-            camera.position.x -= scrollSpeed*0.5;
-            camera.position.y -= scrollSpeed*0.5;
-        }
-        if (Math.abs(scrollSpeed) < 0.001 || height < 0) {
-            isScrolling = false;
-        }
-    }
+    // if (isScrolling) {
+    //     height -= scrollSpeed;
+    //     if(height > 0) {
+    //         scrollSpeed *= 0.95; // scroll smooth
+    //         camera.position.x -= scrollSpeed*0.5;
+    //         camera.position.y -= scrollSpeed*0.5;
+    //     }
+    //     if (Math.abs(scrollSpeed) < 0.001 || height < 0) {
+    //         isScrolling = false;
+    //     }
+    // }
     if ( mixer ) mixer.update( clock.getDelta() );
     updateTitlePosition();
     renderer.render(scene, camera);

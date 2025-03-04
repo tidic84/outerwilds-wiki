@@ -7,7 +7,7 @@ async function startTransition() {
     console.log(images);
     for (var i = 0; i < images.length; i++) {
         
-        images[i].classList.add("test");
+        images[i].classList.add("anim");
         images[i].classList.remove("hidden");
         await sleep(100);
     };

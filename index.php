@@ -20,13 +20,14 @@
     }, false);
 </script>
 
-<body class="bg-black text-white font-montserrat">
+<body class="bg-black text-white font-montserrat overflow-x-hidden">
 <?php
     $racine_path = './';
     $titre = "Accueil";
     include($racine_path."templates/front/header.php");
     echo "<main>";
     include($racine_path."templates/front/home.php");
+    include($racine_path."templates/front/solar_system.php");
     echo "</main>";
     // include($racine_path."templates/front/footer.php")
     

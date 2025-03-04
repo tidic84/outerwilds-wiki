@@ -1,14 +1,14 @@
 <!-- Header pris de tailwindui -->
-<header class="bg-transparent shadow-md">
+<header class="bg-transparent shadow-md z-15 <?php if ($titre == "Accueil") echo "absolute bg-black/50 w-full" ?>">
     <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div class="flex lg:flex-1">
-            <h1 class="text-3xl font-bold tracking-tight text-white-900">
+            <h1 class="text-3xl font-bold tracking-tight <?php if ($titre == "Accueil") echo "text-white" ?> <?php if ($titre != "Accueil") echo "text-white-900" ?>">
                 Outer Wilds Wiki - <?php echo $titre ?>
             </h1>
         </div>
         <div class="flex lg:hidden">
             <button type="button"
-                class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 <?php if ($titre == "Accueil") echo "text-white" ?> <?php if ($titre != "Accueil") echo "text-gray-700" ?>">
                 <span class="sr-only">Open main menu</span>
                 <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                     aria-hidden="true" data-slot="icon">
@@ -17,17 +17,17 @@
                 </svg>
             </button>
         </div>
-        <div class="hidden lg:flex lg:gap-x-12">
+        <div class="hidden lg:flex lg:gap-x-12 lg:flex-1 lg:justify-end">
             <a href="<?php echo $racine_path ?>"
-                class="text-sm/6 font-semibold text-white-900 hover:text-orange-600">Accueil</a>
+                class="text-sm/6 font-semibold <?php if ($titre == "Accueil") echo "text-white hover:text-orange-400" ?> <?php if ($titre != "Accueil") echo "text-white-900 hover:text-orange-600" ?>">Accueil</a>
             <a href="<?php echo $racine_path."control/articles.php" ?>"
-                class="text-sm/6 font-semibold text-white-900 hover:text-orange-600">Articles</a>
+                class="text-sm/6 font-semibold <?php if ($titre == "Accueil") echo "text-white hover:text-orange-400" ?> <?php if ($titre != "Accueil") echo "text-white-900 hover:text-orange-600" ?>">Articles</a>
             <a href="<?php echo $racine_path."control/contact.php" ?>"
-                class="text-sm/6 font-semibold text-white-900 hover:text-orange-600">Contact</a>
+                class="text-sm/6 font-semibold <?php if ($titre == "Accueil") echo "text-white hover:text-orange-400" ?> <?php if ($titre != "Accueil") echo "text-white-900 hover:text-orange-600" ?>">Contact</a>
             <a href="<?php echo $racine_path."control/faq.php" ?>"
-                class="text-sm/6 font-semibold text-white-900 hover:text-orange-600">FAQ</a>
+                class="text-sm/6 font-semibold <?php if ($titre == "Accueil") echo "text-white hover:text-orange-400" ?> <?php if ($titre != "Accueil") echo "text-white-900 hover:text-orange-600" ?>">FAQ</a>
             <a href="<?php echo $racine_path."control/login.php" ?>"
-                class="text-sm/6 font-semibold text-white-900 hover:text-orange-600">Login</a>
+                class="text-sm/6 font-semibold <?php if ($titre == "Accueil") echo "text-white hover:text-orange-400" ?> <?php if ($titre != "Accueil") echo "text-white-900 hover:text-orange-600" ?>">Login</a>
         </div>
     </nav>
 
