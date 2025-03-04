@@ -22,10 +22,18 @@ setTimeout(()=> {
             else {
                 _proximity = 0;
             }
+            let image_w;
+            if(distance<=200 && distance >=0){
+                image_w=0.2 - 0.2/200 * distance;
+            }
+            else{
+                image_w=0;
+            }
 
             let _depth1 = `${(_mouseX - _w) *_proximity}%,${-50+(_mouseY - _h) * _proximity}%`;
-            images[i].style.transform = `translate(${_depth1})`;
+            let scale = 1 + image_w;
+            images[i].style.transform = `translate(${_depth1}) scale(${scale})`;
         }
     });
-} ,2000)
+} ,0)
 
