@@ -18,12 +18,6 @@
         $titre = "Contact";
         
         if (!empty($_POST)) {
-            echo "<pre>";
-            print_r($_POST);
-            echo "</pre>";
-            // Débogage - afficher les données reçues
-            error_log("Données POST reçues : " . print_r($_POST, true));
-            
             $nom = $_POST['nom'] ?? '';
             $email = $_POST['email'] ?? '';
             $message = $_POST['message'] ?? '';
@@ -31,40 +25,25 @@
             // Validation des données
             if (empty($nom) || empty($email) || empty($message)) {
                 $error = "Tous les champs sont obligatoires.";
-                error_log("Erreur validation : champs manquants");
             } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 $error = "L'adresse email n'est pas valide.";
-                error_log("Erreur validation : email invalide");
             } else {
+                
                 $to = "contact@tidic.fr";
+                
                 $subject = "Nouveau message de contact - OuterWilds Wiki";
+                
                 $message_body = "Nom: " . $nom . "\n";
                 $message_body .= "Email: " . $email . "\n\n";
                 $message_body .= "Message:\n" . $message;
                 
-                // Ajout d'en-têtes supplémentaires pour améliorer la livraison
-                $headers = "MIME-Version: 1.0\r\n";
-                $headers .= "Content-type: text/plain; charset=UTF-8\r\n";
-                $headers .= "From: " . $email . "\r\n";
+                $headers = "From: " . $email . "\r\n";
                 $headers .= "Reply-To: " . $email . "\r\n";
-                $headers .= "X-Mailer: PHP/" . phpversion();
                 
-                // Tentative d'envoi avec plus de détails sur l'erreur
-                error_log("Tentative d'envoi de mail à : " . $to);
-                
-                try {
-                    $result = mail($to, $subject, $message_body, $headers);
-                    error_log("Résultat de mail() : " . ($result ? "succès" : "échec"));
-                    
-                    if($result) {
-                        $success = "Votre message a été envoyé avec succès !";
-                    } else {
-                        $error = "Une erreur est survenue lors de l'envoi du message.";
-                        error_log("Erreur mail() : " . error_get_last()['message'] ?? 'Erreur inconnue');
-                    }
-                } catch (Exception $e) {
+                if(mail($to, $subject, $message_body, $headers)) {
+                    $success = "Votre message a été envoyé avec succès !";
+                } else {
                     $error = "Une erreur est survenue lors de l'envoi du message.";
-                    error_log("Exception lors de l'envoi : " . $e->getMessage());
                 }
             }
         }
