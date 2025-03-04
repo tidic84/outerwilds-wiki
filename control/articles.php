@@ -1,5 +1,4 @@
 <?php
-// simulter des articles:
 $articles = [
     [
         'id' => 1,
@@ -37,28 +36,57 @@ $articles = [
         'image' => 'https://assetsio.gnwcdn.com/Outer-Wilds-Angler-Fish.jpg?width=1200&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp'
     ],
 ];
-
-
-?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <title>Articles - OuterWilds Wiki</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <?php
+if (isset($_GET['id'])) {
+    $articleId = $_GET['id'];
+    
+    $article = null;
+    foreach ($articles as $a) {
+        if ($a['id'] == $articleId) {
+            $article = [
+                'id' => $a['id'],
+                'title' => $a['titre'],
+                'content' => $a['contenu'],
+                'image' => $a['image'],
+                'date' => $a['date_creation']
+            ];
+            break;
+        }
+    }
+    
+    if ($article) {
         $racine_path = '../';
-        $titre = "Articles";
+        $titre = $article['title'];
         include($racine_path."templates/front/header.php");
-        include($racine_path."templates/front/article_card.php");
+        include($racine_path."templates/front/article_detail.php");
+    } else {
+        header('Location: articles.php');
+        exit;
+    }
+} else {
+    echo "<div>tg.php</div>";
     ?>
-</body>
-</html>
+    <!DOCTYPE html>
+    <html lang="fr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <title>Articles - OuterWilds Wiki</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <?php
+            $racine_path = '../';
+            $titre = "Articles";
+            include($racine_path."templates/front/header.php");
+            include($racine_path."templates/front/article_card.php");
+        ?>
+    </body>
+    </html>
+    <?php
+}
+?>

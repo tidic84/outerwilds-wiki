@@ -26,7 +26,7 @@
                                         <p class="text-gray-500 leading-6 mb-10">
                                             <?php echo htmlspecialchars(substr($article['contenu'], 0, 150)) . '...'; ?>
                                         </p>
-                                        <a href="article.php?id=<?php echo $article['id']; ?>" 
+                                        <a href="articles.php?id=<?php echo $article['id']; ?>" 
                                            class="cursor-pointer text-lg text-orange-600 font-semibold">
                                             Lire plus...
                                         </a>

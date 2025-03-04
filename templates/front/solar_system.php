@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solar System</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <script src="./template/js/parallax.js"></script>
-    <script src="./template/js/anim_circ.js"></script>
+    <script src="./js/parallax.js"></script>
+    <script src="./js/anim_circ.js"></script>
     <style>
         html, body {
             height: 100%;
@@ -58,30 +58,30 @@
     </style>
 </head>
 <body>
-    <img src="./res/Back_sol__void.png" alt="Background" class="background">
+    <img src="../../res/Back_sol__void.png" alt="Background" class="background">
     <div class="flex">
         <div class="w-1/6 flex justify-center">
-            <img src="./res/soleil1.png" alt="Soleil" class="Sol">
+            <img src="../../res/soleil1.png" alt="Soleil" class="Sol">
         </div>
         <div class="w-1/6 flex justify-center">
-            <img src="./res/saborb.png" alt="saborb" class="orbite">
-            <img src="./res/sablieresfond.png" alt="sabliere" class="astre parallax hidden" >
+            <img src="../../res/saborb.png" alt="saborb" class="orbite">
+            <img src=".././res/sablieresfond.png" alt="sabliere" class="astre parallax hidden" >
         </div>
         <div class="w-1/6 flex justify-center">
-        <img src="./res/atreorb.png" alt="saborb" class="orbite">
-            <img src="./res/aatrebois.png" alt="atrebois" class="astre parallax hidden">
+        <img src="../../res/atreorb.png" alt="saborb" class="orbite">
+            <img src="../../res/aatrebois.png" alt="atrebois" class="astre parallax hidden">
         </div>
         <div class="w-1/6 flex justify-center">
-        <img src="./res/cravorb.png" alt="saborb" class="orbite">
-            <img src="./res/cravité.png" alt="cravite" class="astre parallax hidden">
+        <img src="../../res/cravorb.png" alt="saborb" class="orbite">
+            <img src="../../res/cravité.png" alt="cravite" class="astre parallax hidden">
         </div>
         <div class="w-1/6 flex justify-center">
-        <img src="./res/levorb.png" alt="saborb" class="orbite">
-            <img src="./res/leviate.png" alt="leviate" class="astre parallax hidden">
+        <img src="../../res/levorb.png" alt="saborb" class="orbite">
+            <img src="../../res/leviate.png" alt="leviate" class="astre parallax hidden">
         </div>
         <div class="w-1/6 flex justify-center">
-        <img src="./res/somborb.png" alt="saborb" class="orbite">
-            <img src="./res/sombronce.png" alt="sombronce" class="astre parallax hidden">
+        <img src="../../res/somborb.png" alt="saborb" class="orbite">
+            <img src="../../res/sombronce.png" alt="sombronce" class="astre parallax hidden">
         </div>
     </div>
     
