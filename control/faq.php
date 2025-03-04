@@ -47,7 +47,7 @@
     <div class="max-w-3xl mx-auto space-y-6">
         <?php foreach($faq_items as $item): ?>
             <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                <div class="p-4 bg-orange-600">
+                <div class="p-4 bg-gray-500">
                     <h2 class="text-xl font-semibold text-white"><?php echo htmlspecialchars($item['question']); ?></h2>
                 </div>
                 <div class="p-4 bg-gray-50">
