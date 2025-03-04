@@ -11,27 +11,17 @@
     <title>OuterWilds Wiki</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
-<script>
-    window.addEventListener('resize', function () {
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-    }, false);
-</script>
-
-<body class="bg-black text-white font-montserrat">
-<?php
-    $racine_path = './';
-    $titre = "Accueil";
-    include($racine_path."templates/front/header.php");
-    echo "<main>";
-    include($racine_path."templates/front/home.php");
-    echo "</main>";
-    // include($racine_path."templates/front/footer.php")
+<body>
     
-?>
-
+    <?php
+        $racine_path = '../';
+        $titre = "Login";
+        include($racine_path."templates/front/header.php");
+        echo "<main>";
+        include($racine_path."templates/front/form_login.php");
+        echo "</main>";
+        
+    ?>
 
 </body>
 </html>
