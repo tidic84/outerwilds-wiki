@@ -17,8 +17,13 @@
         $racine_path = '../';
         $titre = "Contact";
         
-        // Traitement du formulaire
-        if (!empty($_POST)) {  // Vérifie si des données POST ont été envoyées
+        if (!empty($_POST)) {
+            echo "<pre>";
+            print_r($_POST);
+            echo "</pre>";
+            // Débogage - afficher les données reçues
+            error_log("Données POST reçues : " . print_r($_POST, true));
+            
             $nom = $_POST['nom'] ?? '';
             $email = $_POST['email'] ?? '';
             $message = $_POST['message'] ?? '';
@@ -26,29 +31,40 @@
             // Validation des données
             if (empty($nom) || empty($email) || empty($message)) {
                 $error = "Tous les champs sont obligatoires.";
+                error_log("Erreur validation : champs manquants");
             } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 $error = "L'adresse email n'est pas valide.";
+                error_log("Erreur validation : email invalide");
             } else {
-                // Destinataire
-                $to = "contact@tidic.fr"; // Remplacez par votre email
-                
-                // Sujet
+                $to = "contact@tidic.fr";
                 $subject = "Nouveau message de contact - OuterWilds Wiki";
-                
-                // Corps du message
                 $message_body = "Nom: " . $nom . "\n";
                 $message_body .= "Email: " . $email . "\n\n";
                 $message_body .= "Message:\n" . $message;
                 
-                // En-têtes
-                $headers = "From: " . $email . "\r\n";
+                // Ajout d'en-têtes supplémentaires pour améliorer la livraison
+                $headers = "MIME-Version: 1.0\r\n";
+                $headers .= "Content-type: text/plain; charset=UTF-8\r\n";
+                $headers .= "From: " . $email . "\r\n";
                 $headers .= "Reply-To: " . $email . "\r\n";
+                $headers .= "X-Mailer: PHP/" . phpversion();
                 
-                // Envoi de l'email
-                if(mail($to, $subject, $message_body, $headers)) {
-                    $success = "Votre message a été envoyé avec succès !";
-                } else {
+                // Tentative d'envoi avec plus de détails sur l'erreur
+                error_log("Tentative d'envoi de mail à : " . $to);
+                
+                try {
+                    $result = mail($to, $subject, $message_body, $headers);
+                    error_log("Résultat de mail() : " . ($result ? "succès" : "échec"));
+                    
+                    if($result) {
+                        $success = "Votre message a été envoyé avec succès !";
+                    } else {
+                        $error = "Une erreur est survenue lors de l'envoi du message.";
+                        error_log("Erreur mail() : " . error_get_last()['message'] ?? 'Erreur inconnue');
+                    }
+                } catch (Exception $e) {
                     $error = "Une erreur est survenue lors de l'envoi du message.";
+                    error_log("Exception lors de l'envoi : " . $e->getMessage());
                 }
             }
         }
@@ -56,7 +72,6 @@
         include($racine_path."templates/front/header.php");
         echo "<main>";
         
-        // Affichage des messages d'erreur ou de succès
         if (isset($error)) {
             echo '<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">';
             echo $error;
