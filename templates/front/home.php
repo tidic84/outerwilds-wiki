@@ -1,5 +1,5 @@
 <div class="relative w-full overflow-x-hidden z-10">
-    <h1 id="title" class="title text-white absolute left-0 top-55 font-extrabold w-full text-center text-8xl">
+    <h1 id="title" class="title text-white absolute left-0 top-70 font-extrabold w-full text-center text-8xl">
         OUTER WILDS Wiki
     </h1>
 

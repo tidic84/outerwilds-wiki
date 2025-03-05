@@ -1,6 +1,6 @@
 <div class="flex min-h-200 flex-col justify-center px-6 py-12 lg:px-8">
   <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-    <h2 class="text-center text-2xl/9 font-bold tracking-tight text-gray-900">Connection</h2>
+    <h2 class="text-center text-2xl/9 font-bold tracking-tight text-gray-900">Rénitialisation de mot de passe</h2>
   </div>
 
   <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
@@ -14,10 +14,7 @@
 
       <div>
         <div class="flex items-center justify-between">
-          <label for="password" class="block text-sm/6 font-medium text-gray-900">Mot de passe</label>
-          <div class="text-sm">
-            <a href="<?php echo $racine_path."control/login-forgot.php" ?>" class="font-semibold text-orange-600 hover:text-orange-500">Mot de passe oublié ?</a>
-          </div>
+          <label for="password" class="block text-sm/6 font-medium text-gray-900">Code reçu par mail</label>
         </div>
         <div class="mt-2">
           <input type="password" placeholder="*************" name="password" id="password" autocomplete="current-password" required class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-orange-600 sm:text-sm/6">
@@ -25,7 +22,7 @@
       </div>
 
       <div>
-        <button type="submit" class="flex w-full justify-center rounded-md bg-orange-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-orange-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600">Se Connecter</button>
+        <button type="submit" class="flex w-full justify-center rounded-md bg-orange-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-orange-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600">Rénitialiser</button>
       </div>
     </form>
 

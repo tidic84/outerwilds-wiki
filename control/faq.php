@@ -11,7 +11,7 @@
     <title>OuterWilds Wiki</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-gray-100">
     
     <?php
         $racine_path = '../';

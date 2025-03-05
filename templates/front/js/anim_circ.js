@@ -4,7 +4,6 @@ function sleep(ms) {
 
 async function startTransition() {
     const images = document.getElementsByClassName("parallax");
-    console.log(images);
     for (var i = 0; i < images.length; i++) {
         
         images[i].classList.add("anim");
@@ -14,5 +13,8 @@ async function startTransition() {
 
     
 }
-setTimeout(startTransition, 10);
-
+window.addEventListener("scroll", async () => {
+    if(window.scrollY <= window.innerHeight) {
+        startTransition();
+    }
+})

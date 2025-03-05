@@ -1,6 +1,6 @@
-<div class="flex min-h-200 flex-col justify-center px-6 py-12 lg:px-8">
+<div class="flex min-h-screen flex-col justify-center px-6 py-12 lg:px-8 -mt-10">
   <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-    <h2 class="text-center text-2xl/9 font-bold tracking-tight text-gray-900">Connection</h2>
+    <h2 class="text-center text-2xl/9 font-bold tracking-tight text-gray-900">Connection Admin</h2>
   </div>
 
   <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
@@ -16,7 +16,6 @@
         <div class="flex items-center justify-between">
           <label for="password" class="block text-sm/6 font-medium text-gray-900">Mot de passe</label>
           <div class="text-sm">
-            <a href="<?php echo $racine_path."control/login-forgot.php" ?>" class="font-semibold text-orange-600 hover:text-orange-500">Mot de passe oublié ?</a>
           </div>
         </div>
         <div class="mt-2">
@@ -28,10 +27,5 @@
         <button type="submit" class="flex w-full justify-center rounded-md bg-orange-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-orange-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600">Se Connecter</button>
       </div>
     </form>
-
-    <p class="mt-10 text-center text-sm/6 text-gray-500">
-      Pas encore inscrit?
-      <a href="<?php echo $racine_path."control/register.php" ?>" class="font-semibold text-orange-600 hover:text-orange-500"> Se créer un compte</a>
-    </p>
   </div>
 </div>
