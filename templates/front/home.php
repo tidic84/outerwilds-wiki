@@ -13,7 +13,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/helpers/VertexNormalsHelper.js"></script>
-<script src="main.js"></script>
+<script src="<?php echo $racine_path."templates/front/js/main.js" ?>"></script>
 
 
 
