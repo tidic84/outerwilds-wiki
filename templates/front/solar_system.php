@@ -40,7 +40,7 @@
 
         <div class="my-10 max-w-4xl px-6 py-8 border-2 border-solid rounded-xl border-4 border-orange-500 bg-gray-800/90 shadow-2xl z-20">
             <div class="prose prose-md max-w-150 text-white">
-                <h3>salut salut comment ca va moi ca va c aleatoire</h3>
+                <h3>bla blbl blblbblb blblblblbl lblb lb lb bl blblblb blblb  blblblblbl blblblb</h3>
             </div>
         </div>
 
@@ -50,7 +50,7 @@
 
         <div class="my-10 max-w-4xl px-6 py-8 border-2 border-solid rounded-xl border-4 border-orange-500 bg-gray-800/90 shadow-2xl z-20">
             <div class="prose prose-md max-w-150 text-white">
-                <h3>salut salut comment ca va moi ca va c aleatoire</h3>
+                <h3>bla blbl blblbblb blblblblbl lblb lb lb bl blblblb blblb  blblblblbl blblblb</h3>
             </div>
         </div>
     </div>
@@ -61,7 +61,7 @@
 
         <div class="my-10 max-w-4xl px-6 py-8 border-2 border-solid rounded-xl border-4 border-orange-500 bg-gray-800/90 shadow-2xl z-20 object-left">
             <div class="prose prose-md max-w-150 text-white">
-                <h3>salut salut comment ca va moi ca va c aleatoire</h3>
+                <h3>bla blbl blblbblb blblblblbl lblb lb lb bl blblblb blblb  blblblblbl blblblb</h3>
             </div>
         </div>
 
@@ -72,7 +72,7 @@
 
         <div class="my-10 max-w-4xl px-6 py-8 border-2 border-solid rounded-xl border-4 border-orange-500 bg-gray-800/90 shadow-2xl z-20 object-left">
             <div class="prose prose-md max-w-150 text-white">
-                <h3>salut salut comment ca va moi ca va c aleatoire</h3>
+                <h3>bla blbl blblbblb blblblblbl lblb lb lb bl blblblb blblb  blblblblbl blblblb</h3>
             </div>
         </div>
 
@@ -87,7 +87,7 @@
 
         <div class="my-10 max-w-4xl px-6 py-8 border-2 border-solid rounded-xl border-4 border-orange-500 bg-gray-800/90 shadow-2xl z-20">
             <div class="prose prose-md max-w-150 text-white">
-                <h3>salut salut comment ca va moi ca va c aleatoire</h3>
+                <h3>bla blbl blblbblb blblblblbl lblb lb lb bl blblblb blblb  blblblblbl blblblb</h3>
             </div>
         </div>
 
