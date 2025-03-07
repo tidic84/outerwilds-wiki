@@ -15,7 +15,7 @@
     
     <?php
         $racine_path = '../';
-        $titre = "Login";
+        $titre = "Profile";
         include($racine_path."templates/front/header.php");
         echo "<main>";
         include($racine_path."templates/front/profile.php");
