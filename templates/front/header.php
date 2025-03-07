@@ -1,5 +1,5 @@
 <!-- Header pris de tailwindui -->
-<header id="header" class="backdrop-blur shadow-md z-15 <?php if ($titre == "Accueil") echo "duration-300 ease bg-black/50 w-full accueil fixed header opacity-0 hover:opacity-100"; else echo "bg-white" ?>">
+<header id="header" class="backdrop-blur shadow-md z-25 <?php if ($titre == "Accueil") echo "duration-300 ease bg-black/50 w-full accueil fixed header opacity-0 hover:opacity-100"; else echo "bg-white" ?>">
     <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div class="flex lg:flex-1">
             <h1 class="text-3xl font-bold tracking-tight <?php if ($titre == "Accueil") echo "text-white" ?> <?php if ($titre != "Accueil") echo "text-white-900" ?>">

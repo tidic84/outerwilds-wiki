@@ -32,7 +32,5 @@
     // include($racine_path."templates/front/footer.php")
     
 ?>
-
-
 </body>
 </html>

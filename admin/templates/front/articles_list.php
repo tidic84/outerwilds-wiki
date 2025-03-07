@@ -29,7 +29,7 @@
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900"><?php echo $article['titre']; ?></td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900"><?php echo $article['date_creation']; ?></td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                                    <a href="#" class="text-orange-600 hover:text-orange-900 mr-3">Modifier</a>
+                                    <a href="<?php echo $racine_path."control/edit_article.php" ?>" class="text-orange-600 hover:text-orange-900 mr-3">Modifier</a>
                                     <a href="#" class="text-red-600 hover:text-red-900">Supprimer</a>
                                 </td>
                             </tr>

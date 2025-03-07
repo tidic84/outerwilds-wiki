@@ -9,7 +9,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
         <title>Articles - OuterWilds Wiki</title>
-        <link rel="stylesheet" href="style.css">
     </head>
     <body class="bg-gray-100">
         
@@ -51,6 +50,7 @@ $articles = [
         'image' => 'https://assetsio.gnwcdn.com/Outer-Wilds-Angler-Fish.jpg?width=1200&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp'
     ],
 ];
+
 if (isset($_GET['id'])) {
     $articleId = $_GET['id'];
     
@@ -73,6 +73,8 @@ if (isset($_GET['id'])) {
         $titre = $article['title'];
         include($racine_path."templates/front/header.php");
         include($racine_path."templates/front/article_detail.php");
+
+
     } else {
         header('Location: articles.php');
         exit;

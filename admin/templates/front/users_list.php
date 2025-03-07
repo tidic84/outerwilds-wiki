@@ -36,7 +36,7 @@ $users = [
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900"><?php echo $user['email']; ?></td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900"><?php echo $user['role']; ?></td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                                    <a href="#" class="text-orange-600 hover:text-orange-900 mr-3">Modifier</a>
+                                    <a href="<?php echo $racine_path."control/edit_user.php" ?>" class="text-orange-600 hover:text-orange-900 mr-3">Modifier</a>
                                     <a href="#" class="text-red-600 hover:text-red-900">Supprimer</a>
                                 </td>
                             </tr>

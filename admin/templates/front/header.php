@@ -12,6 +12,8 @@
                 class="text-sm/6 font-semibold text-gray-900 hover:text-orange-600">Utilisateurs</a>
             <a href="<?php echo $racine_path."control/articles.php" ?>"
                 class="text-sm/6 font-semibold text-gray-900 hover:text-orange-600">Articles</a>
+            <a href="<?php echo $racine_path."control/faq.php" ?>"
+                class="text-sm/6 font-semibold text-gray-900 hover:text-orange-600">FAQ</a>
             <a href="<?php echo "../".$racine_path ?>"
                 class="text-sm/6 font-semibold text-gray-900 hover:text-orange-600">Retour au site</a>
         </div>
