@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>OuterWilds Wiki</title>
+    <link rel="stylesheet" href="<?php echo $racine_path?>templates/front/css/style.css">
+</head>
+<body class="overflow-x-hidden <?php if ($titre != 'Accueil') echo 'bg-gray-100'; else echo 'bg-black' ?>">
 <!-- Header pris de tailwindui -->
 <header id="header" class="backdrop-blur shadow-md z-25 <?php if ($titre == "Accueil") echo "duration-300 ease bg-black/50 w-full accueil fixed header opacity-0 hover:opacity-100"; else echo "bg-white" ?>">
     <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
@@ -68,3 +82,10 @@
         echo "<script src='".$racine_path."templates/front/js/header.js'></script>";
     }
 ?>
+<script>
+    window.addEventListener('resize', function () {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+    }, false);
+</script>

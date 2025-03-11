@@ -1,26 +1,5 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <title>OuterWilds Wiki</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="bg-gray-100">
-    
-    <?php
-        $racine_path = '../';
-        $titre = "FAQ";
-        include($racine_path."templates/front/header.php");        
-    ?>
-
-<main class="container mx-auto px-4 py-8">
-    <h1 class="text-3xl font-bold text-center mb-8">Foire Aux Questions</h1>
+   
+   
 
     <?php
     $faq_items = [
@@ -42,20 +21,9 @@
         ]
     ];
     ?>
-
-    <div class="max-w-3xl mx-auto space-y-6">
-        <?php foreach($faq_items as $item): ?>
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                <div class="p-4 bg-gray-500">
-                    <h2 class="text-xl font-semibold text-white"><?php echo htmlspecialchars($item['question']); ?></h2>
-                </div>
-                <div class="p-4 bg-gray-50">
-                    <p class="text-gray-700"><?php echo htmlspecialchars($item['reponse']); ?></p>
-                </div>
-            </div>
-        <?php endforeach; ?>
-    </div>
-</main>
-    
-</body>
-</html>
+     <?php
+        $racine_path = '../';
+        $titre = "FAQ";
+        include($racine_path."templates/front/header.php");        
+        include($racine_path."templates/front/faq.php");
+    ?>
