@@ -9,11 +9,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <title>OuterWilds Wiki</title>
-    <link rel="stylesheet" href="<?php echo $racine_path?>templates/front/css/style.css">
 </head>
 <body class="overflow-x-hidden <?php if ($titre != 'Accueil') echo 'bg-gray-100'; else echo 'bg-black' ?>">
 <!-- Header pris de tailwindui -->
-<header id="header" class="backdrop-blur shadow-md z-25 <?php if ($titre == "Accueil") echo "duration-300 ease bg-black/50 w-full accueil fixed header opacity-0 hover:opacity-100"; else echo "bg-white" ?>">
+<header id="header" class="backdrop-blur shadow z-25 <?php if ($titre == "Accueil") echo "duration-300 ease bg-black/50 w-full accueil fixed header opacity-0 hover:opacity-100"; else echo "bg-white" ?>">
     <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div class="flex lg:flex-1">
             <h1 class="text-3xl font-bold tracking-tight <?php if ($titre == "Accueil") echo "text-white" ?> <?php if ($titre != "Accueil") echo "text-white-900" ?>">

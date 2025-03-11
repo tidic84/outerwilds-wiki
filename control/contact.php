@@ -34,7 +34,7 @@
     }
 
     include($racine_path."templates/front/header.php");
-    echo "<main>";
+    echo "<main class='mb-20'>";
     
     if (isset($error)) {
         echo '<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">';
@@ -49,4 +49,6 @@
     
     include($racine_path."templates/front/form_contact.php");
     echo "</main>";
+    include($racine_path."templates/front/footer.php");
+
 ?>

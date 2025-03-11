@@ -26,4 +26,5 @@
         $titre = "FAQ";
         include($racine_path."templates/front/header.php");        
         include($racine_path."templates/front/faq.php");
+        include($racine_path."templates/front/footer.php");
     ?>

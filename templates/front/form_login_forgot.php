@@ -1,4 +1,4 @@
-<div class="flex min-h-200 flex-col justify-center px-6 py-12 lg:px-8">
+<div class="flex min-h-200 flex-col justify-center px-6 py-12 lg:px-8 mb-10">
   <div class="sm:mx-auto sm:w-full sm:max-w-sm">
     <h2 class="text-center text-2xl/9 font-bold tracking-tight text-gray-900">Rénitialisation de mot de passe</h2>
   </div>

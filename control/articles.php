@@ -59,8 +59,6 @@ if (isset($_GET['id'])) {
         $titre = $article['title'];
         include($racine_path."templates/front/header.php");
         include($racine_path."templates/front/article_detail.php");
-
-
     } else {
         header('Location: articles.php');
         exit;
@@ -73,6 +71,7 @@ if (isset($_GET['id'])) {
             $titre = "Articles";
             include($racine_path."templates/front/header.php");
             include($racine_path."templates/front/article_card.php");
+            include($racine_path."templates/front/footer.php");
         ?>
     <?php
 }
