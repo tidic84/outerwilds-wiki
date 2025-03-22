@@ -53,13 +53,13 @@ canvas { display: block; }
 }
 
 .twinkling {
-    width: 10000px;
+    width: 1000000px;
     height: 100vh;
     overflow: hidden;
-    background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
-    background-size: 1000px 1000px;
+    background: transparent url("../../../res/overlay.png") repeat-y left;
+    background-size: 1000px 1200px;
     position: absolute;
-    margin-top: -75vh;
+    margin-top: -90vh;
     z-index: 0;
 
     -moz-animation: move-background 70s linear infinite;

@@ -1,5 +1,5 @@
 <?php
-class article {
+class Article {
     private $title;
     private $content;
     private $date_created;
@@ -12,6 +12,16 @@ class article {
         $this->date_created = date('Y-m-d H:i:s');
         $this->date_updated = date('Y-m-d H:i:s');
         $this->history = array();
+    }
+
+    public function __get($name)
+    {
+        return $this->$name;
+    }
+
+    public function __set($name, $value)
+    {
+        $this->$name = $value;
     }
 }
 ?>
